@@ -1,0 +1,28 @@
+{% set name = "helloworld" %}
+{% set version = "0.0.1" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+build:
+  noarch: python
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
+
+source:
+  git_url: https://github.com/aMahanna/helloworldconda
+
+requirements:
+  host:
+    - python >=3.7
+    # - pip
+    # - setuptools_scm >=3.4
+  run:
+    - python >=3
+    # - setuptools >=42
+    # - setuptools_scm >=3.4
+
+about:
+  home: https://github.com/aMahanna/helloworldconda
+  summary: Hello World Conda Package (May 2022)
