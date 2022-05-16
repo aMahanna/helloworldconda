@@ -1,5 +1,5 @@
 {% set name = "helloworld" %}
-{% set version = "0.0.1" %}
+{% set version = environ.get('GIT_DESCRIBE_TAG', '0.0.0.dev').lstrip('v') %}
 
 package:
   name: {{ name|lower }}

@@ -1,5 +1,8 @@
 name: release
-on: [push, workflow_dispatch]
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
 env:
   PACKAGE_DIR: helloworld
 jobs:
