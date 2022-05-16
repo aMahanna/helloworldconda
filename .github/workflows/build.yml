@@ -13,12 +13,12 @@ jobs:
       - name: Setup python
         uses: actions/setup-python@v2
         with:
-          python-version: "3.8"
+          python-version: "3.9"
       - name: Setup Miniconda
         uses: conda-incubator/setup-miniconda@v2.1.1
         with:
           auto-update-conda: true
-          python-version: "3.8"
+          python-version: "3.9"
       - name: Conda stuff
         shell: bash -l {0}
         run: |
@@ -26,3 +26,4 @@ jobs:
           conda env list
           conda install conda-build anaconda-client conda-verify -y
           anaconda login --username aMahanna --password '${{ secrets.CONDA_PASSWORD }}'
+          conda build .

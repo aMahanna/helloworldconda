@@ -16,10 +16,10 @@ source:
 requirements:
   host:
     - python >=3.7
-    # - pip
+    - pip
     # - setuptools_scm >=3.4
   run:
-    - python >=3
+    - python >=3.7
     # - setuptools >=42
     # - setuptools_scm >=3.4
 
