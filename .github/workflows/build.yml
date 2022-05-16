@@ -1,0 +1,24 @@
+name: release
+on: [push, workflow_dispatch]
+env:
+  PACKAGE_DIR: helloworld
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Release package
+    steps:
+      - uses: actions/checkout@v2
+      - name: Fetch complete history for all tags and branches
+        run: git fetch --prune --unshallow
+      - name: Setup python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.8"
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v2.1.1
+        with:
+          auto-update-conda: true
+          python-version: "3.8"
+      - name: Conda info
+        shell: bash -l {0}
+        run: conda info
