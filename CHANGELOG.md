@@ -1,5 +1,12 @@
 (unreleased)
 ------------
+- Update main.py. [aMahanna]
+- Update release.yml. [aMahanna]
+- Merge pull request #1 from aMahanna/actions/changelog. [Anthony
+  Mahanna]
+
+  changelog: release v2.0.1
+- !gitchangelog. [aMahanna]
 - Update release.yml. [aMahanna]
 - Create CHANGELOG.md. [aMahanna]
 - Update main.py. [aMahanna]
