@@ -19,6 +19,11 @@ jobs:
         with:
           auto-update-conda: true
           python-version: "3.8"
-      - name: Conda info
+      - name: Conda stuff
         shell: bash -l {0}
-        run: conda info
+        run: |
+          conda info
+          conda env list
+          conda install conda-build anaconda-client conda-verify -y
+          anaconda login --username aMahanna --password ${{ secrets.CONDA_PASSWORD }}
+          
